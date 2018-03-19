@@ -6,10 +6,12 @@ using namespace std;
 
 int main(){
 	sapo *sapos;
-	sapos = new sapo();
-	cin >> sapo::distTotal;
-	cout << sapos->pulo <<endl;
+	sapos = new sapo[3];
+	sapos->atribuiID(sapos);	
+	//cin >> sapo::distTotal;
+	sapos->startcorrida(sapos);		
+	//sapos->infos(sapos);	
+	//sapos->vervencedor(sapos);	
 	
-
 return 0;
 }
