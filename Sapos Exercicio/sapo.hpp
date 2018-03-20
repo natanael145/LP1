@@ -1,14 +1,15 @@
 class sapo {
 	private:
 		int id;
-		int distInicial = 0;		
+		int chegouprimeiro;		
 		int distpercorrida;
 		int qtPulos;
 		
 	public:
 		static int distTotal;
 		static int getdistTotal();
-		int getdistInicial();
+		void setChegouPrimeiro(int winner);		
+		int getChegouPrimeiro();
 		void setDistPercorrida(int d);
 		int getDistPercorrida();
 		int setID(int numid);
@@ -21,5 +22,6 @@ class sapo {
 		bool existe(int v,sapo *sapos);
 		void infos(sapo *sapos);	
 		void vervencedor(sapo *sapos);	
-		void printavencedor(int vencedor_);	
+		void printavencedor();	
+		void pular(sapo *sapos);
 	};
