@@ -12,6 +12,10 @@ using namespace std;
 	*@param Este construtor não tem parâmetros
 	*/	
 	sapo::sapo(){
+		id=0;
+	}
+	sapo::sapo(int sapoID){
+		id = sapoID;
 	}
 	/**     
 	*@brief Funcão que retorna distância total
@@ -33,16 +37,6 @@ using namespace std;
 	*/
 	int sapo::getnumPulos(){
 		return qtPulos;
-	}
-	/**     
-	*@brief Funcão que começa a corrida
-	*@details Atribui o id de cada sapo, chama a função pular enquanto nenhum sapo atingir a distancia e vê o vencedor
-	*@param sapos Classe que tem todas os atributos do sapo
-	*/
-	void sapo::startcorrida(sapo *sapos){		
-		atribuiID(sapos);
-		pular(sapos);
-		vervencedor(sapos);
 	}
 	/**     
 	*@brief Funcão que atribui a distância percorrida
@@ -78,9 +72,7 @@ using namespace std;
 	*@brief Funcão que atribui o id
 	*@param numid Variavel usada para receber o identificador do sapo
 	*/
-	int sapo::setID(int numid){	
-		id = numid;
-	}
+
 	/**     
 	*@brief Funcão que retorna o id
 	*@param Esta funcao nao recebe parametros
@@ -92,11 +84,7 @@ using namespace std;
 	*@brief Funcão que atribui id a cada sapo
 	*@param sapos Classe que tem todas os atributos do sapo
 	*/
-	void sapo::atribuiID(sapo *sapos){
-		for(int i = 0;i<3;i++){
-			sapos[i].setID(i+1);
-		}
-	}
+	
 	/**     
 	*@brief Funcão que imprime as informações do sapo
 	*@details A funcão diz a distancia percorrida e a quantidade de pulos de cada sapo
@@ -109,55 +97,16 @@ using namespace std;
 		}
 	}
 	/**     
-	*@brief Funcão que imprime o sapo vencedor 
-	*@param Esta funcão nao recebe parâmetros
-	*/
-	void sapo::printavencedor(){
-			cout << "|------------------------------------------------------|"<<endl;
-			cout << "|           O vencedor foi o sapo : " << getChegouPrimeiro() <<"                  |"<<endl;
-			cout << "|------------------------------------------------------|"<<endl;
-	}		
-	/**     
-	*@brief Funcão que faz a checagem de qual sapo é o vencedor
-	*@param sapos Classe que tem todas os atributos do sapo
-	*/
-	void sapo::vervencedor(sapo *sapos){
-		for(int i = 0 ; i<3; i++){
-			if(sapos[i].distpercorrida>=sapo::distTotal){
-				cout<< "O sapo	 " << sapos[i].getID()<<" atingiu o ponto de chegada primeiro!" <<endl<<endl;	
-				int vencedor = sapos[i].getID();
-				setChegouPrimeiro(vencedor);
-				infos(sapos);
-				printavencedor();					
-				break;			
-			}		
-		}				
-	}
-	/**     
-	*@brief Funcão que atribui o sapo que chegou primeiro
-	*@param winner Variavel que recebe o id do sapo que chegou primeiro
-	*/
-	void sapo::setChegouPrimeiro(int winner){
-		chegouprimeiro = winner;
-	}
-	/**     
-	*@brief Funcão que retorna o sapo que chegou primeiro
-	*@param Esta funcão nao recebe parâmetros
-	*/
-	int sapo::getChegouPrimeiro(){
-		return chegouprimeiro;
-	}
-	/**     
 	*@brief Funcão que faz os sapos pularem
 	*@details A funcão gera um valor de distancia randomico para cada sapo pular e enquanto nenhum sapo antigir a distancia total a corrida não acaba
 	*@param sapos Classe que tem todas os atributos do sapo
 	*/
 	void sapo::pular(sapo *sapos){
 		int i,k=0,v;
-		while(sapos[0].distpercorrida<=sapo::distTotal && sapos[1].distpercorrida<=sapo::distTotal && sapos[2].distpercorrida<=sapo::distTotal){
+		//while(sapos[0].distpercorrida<=sapo::distTotal && sapos[1].distpercorrida<=sapo::distTotal && sapos[2].distpercorrida<=sapo::distTotal){
 			for(i = 0;i<3;i++){					
 				srand(time(NULL));		
-				v = rand()%sapo::distTotal/3;
+				v = rand()%sapo::distTotal/2;
 				while(existe(v,sapos)){
 					v = rand()%sapo::distTotal/2;		
 				}					
@@ -168,5 +117,5 @@ using namespace std;
 				k++;	
 			}
 		cout << "-------------------------------------------------"<<endl;
-		}	
+		//}	
 	}
