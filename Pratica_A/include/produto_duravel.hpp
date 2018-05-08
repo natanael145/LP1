@@ -1,6 +1,6 @@
 #ifndef PRODUTO_DURAVEL_H
 #define PRODUTO_DURAVEL_H
-#include "produto.hpp"
+#include "../include/produto.hpp"
 #include <string>
 using namespace std;
 

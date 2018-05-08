@@ -1,6 +1,6 @@
 #ifndef LIVRO_H
 #define LIVRO_H
-#include "produto_duravel.hpp"
+#include "../include/produto_duravel.hpp"
 #include <string>
 using namespace std;
 

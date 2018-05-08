@@ -1,9 +1,10 @@
 #include <iostream>
 #include <string>
-#include "carro.hpp"
-#include "produto_duravel.hpp"
+#include "../include/carro.hpp"
+#include "../include/produto_duravel.hpp"
 using namespace std;
 
+//CONSTRUTOR
 Carro::Carro(string name,string descrip,string fab_date,string ano,string cavalos,double price,string marca,string material,string durabilit){
     this->name = name;
 	this->price = price;

@@ -1,7 +1,7 @@
 #ifndef PRODUTO_NDURAVEL_H
 #define PRODUTO_NDURAVEL_H
 #include <string>
-#include "produto.hpp"
+#include "../include/produto.hpp"
 using namespace std;
 
 class Produto_NaoDuravel : public Produto{

@@ -1,7 +1,7 @@
 #include <iostream>
 #include <string>
-#include "produto_nduravel.hpp"
-#include "refrigerante.hpp"
+#include "../include/produto_nduravel.hpp"
+#include "../include/refrigerante.hpp"
 using namespace std;
 
 //SETTERS

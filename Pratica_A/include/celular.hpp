@@ -1,6 +1,6 @@
 #ifndef CEL_H
 #define CEL_H
-#include "produto_duravel.hpp"
+#include "../include/produto_duravel.hpp"
 #include <string>
 using namespace std;
 

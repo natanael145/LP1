@@ -1,10 +1,10 @@
-#ifndef PIZZA_H
-#define PIZZA_H
+#ifndef REFRI_H
+#define REFRI_H
 #include <string>
-#include "produto_nduravel.hpp"
+#include "../include/produto_nduravel.hpp"
 using namespace std;
 
-class Pizza : public Produto_NaoDuravel {
+class Refrigerante : public Produto_NaoDuravel {
     protected:
         string sabor;
         string tamanho;

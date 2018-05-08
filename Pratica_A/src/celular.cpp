@@ -1,7 +1,7 @@
 #include <iostream>
 #include <string>
-#include "celular.hpp"
-#include "produto_duravel.hpp"
+#include "../include/celular.hpp"
+#include "../include/produto_duravel.hpp"
 using namespace std;
 
 //SETTERS

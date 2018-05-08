@@ -1,7 +1,7 @@
 #ifndef CHOCOLATE_H
 #define CHOCOLATE_H
 #include <string>
-#include "produto_nduravel.hpp"
+#include "../include/produto_nduravel.hpp"
 using namespace std;
 
 class Chocolate : public Produto_NaoDuravel {

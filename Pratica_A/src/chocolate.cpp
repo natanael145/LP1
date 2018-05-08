@@ -1,7 +1,7 @@
 #include <iostream>
 #include <string>
-#include "produto_nduravel.hpp"
-#include "chocolate.hpp"
+#include "../include/produto_nduravel.hpp"
+#include "../include/chocolate.hpp"
 
 using namespace std;
 
