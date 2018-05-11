@@ -10,19 +10,18 @@ protected:
 	string name;
 	double salario;
 	int dataADM;
-
+	string status;
 public:
-	//CONSTRUTOR E DESTRUTOR
-	Funcionario(string nameaux,double salarioaux,string dataADMaux);
-	~Funcionario();
+	string getStatus();
+	void setStatus(string statusAux);
 	//SETTERS
 	void setName(string nameaux);
 	void setSalario(double salarioaux);
-	void setDataADM(string dataADMaux);
+	void setDataADM(int dataADMaux);
 	//GETTERS
 	string getName();
 	double getSalario();
-	string getDataADM();
+	int getDataADM();
 
 	
 };

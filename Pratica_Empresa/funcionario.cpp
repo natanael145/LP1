@@ -3,11 +3,11 @@
 #include "funcionario.hpp"
 using namespace std;
 
-//CONSTRUTOR
-Funcionario::Funcionario(string nameaux,double salarioaux, string dataADMaux){
-	this->name = nameaux;
-	this->salario = salarioaux;
-	this->dataADM = dataADMaux;
+void Funcionario::setStatus(string statusAux){
+	status = statusAux;
+}
+string Funcionario::getStatus(){
+	return status;
 }
 //SETTERS
 void Funcionario::setName(string nameaux){
@@ -18,7 +18,7 @@ void Funcionario::setSalario(double salarioaux){
 	this->salario = salarioaux;
 }
 
-void Funcionario::setDataADM(string dataADMaux){
+void Funcionario::setDataADM(int dataADMaux){
 	this->dataADM = dataADMaux;
 }	
 
@@ -32,6 +32,6 @@ double Funcionario::getSalario(){
 	return this->salario;
 }
 
-string Funcionario::getDataADM(){
+int Funcionario::getDataADM(){
 	return this->dataADM;
 }

@@ -8,10 +8,10 @@ class Operario : public Funcionario
 {
 protected:
 	string NameFab;
+	
 public:
 	//CONSTRUTOR E DESTRUTOR
-	Operario();
-	~Operario();
+	Operario(string nameaux,double salarioaux,int dataADMaux,string nameFabAux);
 	//SETTERS
 	void setNameFab(string NameFabAux);
 	//GETTERS

@@ -3,9 +3,15 @@
 #include "operario.hpp"
 using namespace std;
 
-//CONSTRUTOR
-Operario::Operario(){
 
+
+//CONSTRUTOR
+Operario::Operario(string nameaux,double salarioaux,int dataADMaux,string nameFabAux){
+	this->name = nameaux;
+	this->salario = salarioaux;
+	this->dataADM = dataADMaux;
+	this->NameFab = nameFabAux;
+	setStatus("Operario");
 }
 
 //SETTERS
