@@ -9,6 +9,14 @@ void Funcionario::setStatus(string statusAux){
 string Funcionario::getStatus(){
 	return status;
 }
+//FUNCAO QUE AUMENTA O SALARIO
+double Funcionario::getValorAumento(){
+	return this->valorAumento;
+}
+void Funcionario::infos(Funcionario funcPrint){
+	cout <<"Nome : "<<funcPrint.getName() <<"| Salario: " <<funcPrint.getSalario()<<"| Profissão: " <<funcPrint.getStatus()<<endl;
+}
+
 //SETTERS
 void Funcionario::setName(string nameaux){
 	this->name = nameaux;

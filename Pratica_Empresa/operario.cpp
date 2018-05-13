@@ -3,8 +3,9 @@
 #include "operario.hpp"
 using namespace std;
 
-
-
+void Operario::infos(Operario opPrint){
+	cout <<"Nome : "<<opPrint.getName() <<"| Salario: " <<opPrint.getSalario()<<"| Profissão: " <<opPrint.getStatus()<<" |Fabrica: " <<opPrint.getNameFab() <<endl;
+}
 //CONSTRUTOR
 Operario::Operario(string nameaux,double salarioaux,int dataADMaux,string nameFabAux){
 	this->name = nameaux;
