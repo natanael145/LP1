@@ -8,7 +8,7 @@ class Operario : public Funcionario
 {
 protected:
 	string NameFab;
-	double valorAumento = 0.05 * this->getSalario();
+	//double valorAumento = 0.05 * this->getSalario();
 public:
 	void setValorAumento();
 	double getValorAumento();
