@@ -2,6 +2,7 @@
 #include "produto.hpp"
 #include "acervo.hpp"
 #include "livro.hpp"
+#include "cd.hpp"
 #include <iostream>
 #include <string>
 using namespace std;
@@ -9,6 +10,7 @@ using namespace std;
 void interfaceAcervo(){
     Acervo *acervo = new Acervo;
     string tipo1= "Livro";
+    string tipo2= "CD";
     bool sair = false;
     while(sair == false){
         cout << "------Bem-Vindo ao seu Acervo!!!!------"<<endl;
@@ -53,6 +55,33 @@ void interfaceAcervo(){
                 livro.setAnoLancamento(anoLancamento);
                 acervo->inserirMidiaLivro(livro);
             }
+            else if (opcaoInserir == 2){
+                cin.ignore();
+                CD cd;
+                cout << "Informe o nome do CD:"<<endl;
+                string nomeCD;
+                getline(cin,nomeCD);
+                cd.setNome(nomeCD);
+                cout << "Informe o compositor do CD:"<<endl;
+                string nomeCompositor;
+                getline(cin,nomeCompositor);
+                cd.setCompositor(nomeCompositor);
+                cout << "Informe a quantidade de faixas do CD:" <<endl;
+                int qtFaixas;
+                cin >> qtFaixas;
+                cd.setQtFaixas(qtFaixas);
+                cin.ignore();
+                cout << "Informe a gravadora do CD: "<<endl;
+                string gravadora;
+                getline(cin,gravadora);
+                cd.setGravadora(gravadora);
+                cout << "Informe o ano de lançamento do CD: "<<endl;
+                double anoLancamento;
+                cin >> anoLancamento;
+                cd.setAnoLancamento(anoLancamento);
+                acervo->inserirMidiaCD(cd);
+           
+            }
         }
         else if(opcao == 2){
             cout << "Agora digite qual tipo de objeto vc deseja remover!"<<endl;
@@ -71,6 +100,16 @@ void interfaceAcervo(){
                 acervo->removerItem(nomeLivro,tipo1);
                 cout << "teste3"<<endl;
             }
+            else if(opcaoRemover == 2){
+                cin.ignore();
+                cout << "Insira nome do CD que quer remover: "<<endl;
+                cout << "teste1"<<endl;
+                string nomeCD;
+                getline(cin,nomeCD);
+                cout << "teste2"<<endl;
+                acervo->removerItem(nomeCD,tipo2);
+                cout << "teste3"<<endl;
+            } 
         }
         else if(opcao == 3){
             cout << "Mostrando itens do acervo..."<<endl;

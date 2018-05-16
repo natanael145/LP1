@@ -30,6 +30,6 @@ double Livro::getISBN(){
     return this->isbn;
 }
 ostream& operator<< (ostream &o,Livro &l){
-    o <<"Tipo: "<<l.getTipo()<< "| Nome : " <<l.getTitulo()<< " | Ano Lancamento : "<<l.getAnoLancamento()<<" | Editora : "<<l.getEditora() <<endl;
+    o <<"Tipo: "<<l.getTipo()<< "| Nome : " <<l.getTitulo()<< " | Ano Lancamento : "<<l.getAnoLancamento()<<" | ISBN : "<<l.getISBN()<<" | Editora : "<<l.getEditora() <<endl;
 	return o;
 }
