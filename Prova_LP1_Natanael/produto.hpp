@@ -1,3 +1,5 @@
+#ifndef PRODUTO_H
+#define PRODUTO_H
 #include <iostream>
 #include <string>
 using namespace std;
@@ -7,18 +9,21 @@ class Produto
 protected:
 	string nome;
 	string titulo;
-	string anoLancamento;
-
+	double anoLancamento;
+	string tipoMidia;
+	
 public:
 	void setNome(string nomeAux);
 	void setTitulo(string tituloAux);
-	void setAnoLancamento(string anoLancamentoAux);
+	void setAnoLancamento(double anoLancamentoAux);
+	void setTipoMidia(string tipoAux);	
 
 	string getNome();
 	string getTitulo();
-	string getAnoLancamento();
-
-	Produto();
-	~Produto();
+	double getAnoLancamento();
+	string getTipo();
 	
+	friend ostream& operator << (ostream &o,Produto &p);
+
 };
+#endif // !PRODUTO_H
