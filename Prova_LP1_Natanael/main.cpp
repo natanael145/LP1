@@ -2,7 +2,7 @@
 #include <string>
 #include "produto.hpp"
 #include "acervo.hpp"
-//#include "dvd.hpp"
+#include "dvd.hpp"
 #include "livro.hpp"
 #include "cd.hpp"
 #include "interface.hpp"

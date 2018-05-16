@@ -3,6 +3,7 @@
 #include "produto.hpp"
 #include "livro.hpp"
 #include "cd.hpp"
+#include "dvd.hpp"
 #include <iostream>
 #include <string>
 #include <vector>
@@ -24,8 +25,12 @@ public:
     void setQtCD();
     void setQtCD2();
     int getQtCD();
-    void inserirMidiaLivro(Livro item);
-    void inserirMidiaCD(CD item);
+    void setQtDVD();
+    void setQtDVD2();
+    int getQtDVD();
+    void inserirMidiaLivro(Livro *item);
+    void inserirMidiaCD(CD *item);
+    void inserirMidiaDVD(DVD *item);
     void verAcervo();
     void removerItem(string nome,string tipo);
     void verEstatisticas();
