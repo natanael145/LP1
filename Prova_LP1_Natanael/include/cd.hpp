@@ -7,12 +7,12 @@ using namespace std;
 
 class CD : public Produto
 {
-private:
+  private:
 	string compositor;
 	int qtFaixas;
 	string gravadora;
 
-public:
+  public:
 	void setCompositor(string compositorAux);
 	void setQtFaixas(int qtFaixasAux);
 	void setGravadora(string gravadoraAux);
@@ -21,7 +21,7 @@ public:
 	int getQtFaixas();
 	string getGravadora();
 
-	friend ostream& operator << (ostream &o,CD &cd);
+	friend ostream &operator<<(ostream &o, CD &cd);
 
 	CD();
 	~CD();

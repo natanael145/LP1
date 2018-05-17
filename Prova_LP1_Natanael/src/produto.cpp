@@ -1,6 +1,6 @@
 #include <iostream>
 #include <string>
-#include "produto.hpp"
+#include "../include/produto.hpp"
 using namespace std;
 
 void Produto::setNome(string nomeAux){

@@ -1,6 +1,6 @@
 #include <iostream>
 #include <string>
-#include "livro.hpp"
+#include "../include/livro.hpp"
 using namespace std;
 
 Livro::Livro(){
@@ -30,6 +30,6 @@ double Livro::getISBN(){
     return this->isbn;
 }
 ostream& operator<< (ostream &o,Livro &l){
-    o <<"Tipo: "<<l.getTipo()<< "| Nome : " <<l.getNome()<< " | Ano Lancamento : "<<l.getAnoLancamento()<<" | ISBN : "<<l.getISBN()<<" | Editora : "<<l.getEditora() <<endl;
+    o <<"Tipo: "<<l.getTipo()<< " | Nome : " <<l.getNome()<<" | Autor :"<<l.getAutor() <<" | Ano Lancamento : "<<l.getAnoLancamento()<<" | ISBN : "<<l.getISBN()<<" | Editora : "<<l.getEditora() <<endl;
 	return o;
 }

@@ -7,12 +7,12 @@ using namespace std;
 
 class DVD : public Produto
 {
-private:
+  private:
 	string diretor;
 	double duracao;
 	int classificacao;
 
-public:
+  public:
 	void setDiretor(string diretorAux);
 	void setDuracao(double duracaoAux);
 	void setClassificacao(int classificacaoAux);
@@ -21,7 +21,7 @@ public:
 	double getDuracao();
 	int getClassificacao();
 
-	friend ostream& operator << (ostream &o,DVD &dvd);
+	friend ostream &operator<<(ostream &o, DVD &dvd);
 
 	DVD();
 	~DVD();

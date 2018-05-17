@@ -11,12 +11,13 @@ using namespace std;
 
 class Acervo
 {
-protected:
-    std::vector<Produto*> vetor;
+  protected:
+    std::vector<Produto *> vetor;
     int qtCD;
     int qtLivros;
     int qtDVD;
-public:
+
+  public:
     Acervo();
     ~Acervo();
     void setQtLivros();
@@ -32,12 +33,13 @@ public:
     void inserirMidiaCD(CD *item);
     void inserirMidiaDVD(DVD *item);
     void verAcervo();
-    void removerItem(string nome,string tipo);
+    void removerItem(string nome, string tipo);
     void verEstatisticas();
-    void editarItem();
+    void editarItemLivro(string nome, string tipo,int atributo);
+    void editarItemCD(string nome, string tipo,int atributo);
+    void editarItemDVD(string nome, string tipo,int atributo);
+
     void verificarItem(Produto *item);
 };
-
-
 
 #endif
